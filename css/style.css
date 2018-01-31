@@ -1,55 +1,76 @@
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
 	background: #A1FB50;
-
-
-/*  background: linear-gradient(to right, #C90EA7 5%, #000ADE);
-*/
 }
 
 p {
-	font-family: 'Play', sans-serif;
+	font-family: 'Roboto Mono', monospace;
+	line-height: 1.75;
 }
 
 article {
 	padding: 50px;
 	padding-top: 60px;
-	margin-top: 100px;
-	background: #8E8E8E;
-	text-align: center;
+	background: #d0d0d0;
 }
 
 article p {
-	font-size: 1.6rem;
-	width: 85%;
-	margin: 0 auto;
+  max-width: 800px;
 	margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+	text-align: justify;
+	font-size: 1.2rem;
+}
+
+.big-emph {
+	font-size: 4.3rem;
+	color: #3B1261;
+	font-family: 'Play', sans-serif;
+	line-height: 1;
+  font-weight: bold;
 }
 
 .landing-page {
   height: 100vh;
   text-align: center;
+  position: relative;
+
 }
 
-.landing-page h1 {
-	font-family: 'Anton', sans-serif;
-}
-
-
-.landing-page .author {
+.author {
 	font-family: 'Play', sans-serif;
 	text-align: right;
 	margin-left: 40px;
 	float: left;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
 }
 
-.landing-page .intro {
-	width: 700px;
+.intro {
+	max-width: 700px;
+  width: 50%;
 	font-size: 1.3rem;
 	text-align: right;
 	float: right;
 	padding-right: 70px;
-	position: relative;
+	position: absolute;
 	bottom: 50px;
+  right: 0;
 
 }
 
@@ -57,31 +78,56 @@ article p {
 	margin: 200px 0;
 }
 
-.sectiontwo {
-	text-align: left;
-	font-size: 1rem;
-	margin-right: 400px;
+.sectiontwo p {
+	margin-left: 0;
 }
 
-.sectionthree {
-	text-align: right;
-	margin-left: 300px;
+.sectionthree p {
+  margin-right: 0;
 }
 
 .title {
-  position: relative;
-  font-size: 30vw;
-  margin:0;
-  padding: 0;
+  position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100vh;
+	width: 100%;
+
   text-align: center;
+
+  overflow: hidden;
+}
+
+.title h1 {
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  font-size: 70vmin;
+
+  margin: 0;
+  padding: 0;
+  width: auto;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .click {
-  color: red;
+  color: #C90EA7;
+  font-weight: bold;
+  border-bottom: 4px solid #C90EA7;
+  cursor: pointer;
 }
 
 .hover {
   color: blue;
+  font-weight: bold;
+  border: 4px solid blue;
+  padding: 0 2px;
+  cursor: pointer;
+
 }
 
 @keyframes ticker {
@@ -97,7 +143,7 @@ article p {
   }
 }
 
-.ticker-wrap {  
+.ticker-wrap {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -108,21 +154,21 @@ article p {
 }
 
 .ticker {
- 
+
   display: inline-block;
   height: 4rem;
-  line-height: 4rem;  
+  line-height: 4rem;
   white-space: nowrap; /* display items in a line*/
   padding-right: 100%; /*ensure items go before animations repeat (taken from parent due to inline-block)*/
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: ticker;
   animation-duration: 20s;
-  
+
   }
 
 .ticker__item {
-    
+
     display: inline-block;
     padding: 0 2rem;
     color: black;
@@ -135,9 +181,35 @@ article p {
 	margin-top: 0;
 	margin-bottom: 40px;
     font-size: 3rem;
-    color: black; 
+    color: black;
 }
 */
 
 
+#popup-media {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 50;
 
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.back-to-observer {
+  font-family: 'Faster One', cursive;
+  text-align: center;
+  font-size: 50px;
+  padding: 50px 0;
+}
+
+.back-to-observer .click {
+  font-weight: normal;
+}
