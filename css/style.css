@@ -187,6 +187,9 @@ article p {
 }
 */
 
+a {
+  text-decoration: none;
+}
 
 #popup-media {
 	position: fixed;
@@ -214,4 +217,8 @@ article p {
 
 .back-to-observer .click {
   font-weight: normal;
+}
+
+.italic {
+  font-style:italic;
 }
