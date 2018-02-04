@@ -191,6 +191,13 @@ a {
   text-decoration: none;
 }
 
+#tester {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*display: none;*/
+}
+
 #popup-media {
 	position: fixed;
 	top:0;
