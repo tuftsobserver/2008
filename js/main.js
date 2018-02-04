@@ -35,30 +35,59 @@ Array.from(classname).forEach(function(element) {
 
 });
 
-var yearposition = $(".timetravel").offset().top;
+var yearstart = $(".timetravel").offset().top;
 var articleposition = $("article").offset().top;
+var totalheight = $(".timetravel").height();
+var section = totalheight / 11;
 
 
 $(window).scroll(function(event){
 	var scroll = $(window).scrollTop();
-	var yearheight = $(".timetravel").height();
-
-
-	var year = 2018;
-	var counter = 1;
 	
-	if(scroll > yearposition) {
-		$(".timetravel").css("position", "fixed");
-	} else if(scroll > yearposition * 1){
-		$(".timetravel h1").replaceWith("<h1>" + year + "</h1>");
-		year--;
-	} else if(scroll < yearposition){
-		$(".timetravel").css("position", "relative");
-	}
+	console.log("yearstarts: " + yearstart);
+	console.log("total height: " + totalheight);	
+	console.log("section: " + section);
 	console.log("scroll: " + scroll);
-	console.log("yearpos: " + yearposition);
-	console.log("year height: " + yearheight);
-	console.log("article pos: " + articleposition);
+	console.log("scroll end: " + (yearstart + totalheight - section));
+
+	
+	if(scroll > (yearstart + totalheight - section + 200)){
+			$(".timetravel").css("position", "relative");
+	} else if(scroll > yearstart) {
+		$(".timetravel").css("position", "fixed");
+	} else if(scroll < yearstart){
+		$(".timetravel").css("position", "relative");
+	} 
+
+	console.log((10 * section) + yearstart);
+
+	if (scroll > ((10 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2008 + "</h1>");
+		$(".timetravel h1").css("color", "white");
+	} else if (scroll > ((9 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2009 + "</h1>");
+	} else if (scroll > ((8 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2010 + "</h1>");
+	}else if (scroll > ((7 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2011 + "</h1>");
+	} else if (scroll > ((6 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2012 + "</h1>");
+	} else if (scroll > ((5 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2013 + "</h1>");
+	} else if (scroll > ((4 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2014 + "</h1>");
+	} else if (scroll > ((3 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2015 + "</h1>");
+	} else if (scroll > ((2 * section) + yearstart)){
+		$(".timetravel h1").replaceWith("<h1>" + 2016 + "</h1>");
+	} else if(scroll > (yearstart + section)){
+		$(".timetravel h1").replaceWith("<h1>" + 2017 + "</h1>");
+	} else
+		$(".timetravel h1").replaceWith("<h1>" + 2018 + "</h1>");
+
+	// console.log("scroll: " + scroll);
+	// console.log("year height: " + totalheight);
+	// console.log("article pos: " + articleposition);
 
 	
 // if(scroll > 1400){
