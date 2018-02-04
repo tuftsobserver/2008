@@ -88,7 +88,7 @@ article p {
 }
 
 .title {
-  position: absolute;
+  position: relative;
 	top: 0;
 	left: 0;
 
@@ -129,6 +129,22 @@ article p {
   padding: 0 2px;
   cursor: pointer;
 
+}
+
+.timetravel {
+  background:red;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+}
+
+.fixposition {
+  position: fixed;
+
+}
+
+.absoluteposition {
+  position: relative;
 }
 
 @keyframes ticker {
