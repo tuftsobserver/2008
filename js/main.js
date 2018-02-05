@@ -61,3 +61,32 @@ $(window).scroll(function(event){
 	}
 
 });
+
+
+// image preloading
+var img1 = new Image();
+img1.src = 'img/tomcruise.png';
+var img2 = new Image();
+img1.src = 'img/low.jpg';
+var img3 = new Image();
+img1.src = 'img/rings.jpg';
+var img4 = new Image();
+img1.src = 'img/buzz.jpg';
+var img5 = new Image();
+img1.src = 'img/circus.jpg';
+var img6 = new Image();
+img1.src = 'img/glory.jpg';
+var img7 = new Image();
+img1.src = 'img/scientology.jpg';
+var img8 = new Image();
+img1.src = 'img/medal.png';
+var img9 = new Image();
+img1.src = 'img/biography.jpg';
+var img10 = new Image();
+img1.src = 'img/obama.jpg';
+var img11 = new Image();
+img1.src = 'img/birther.jpg';
+var img12 = new Image();
+img1.src = 'img/britney.jpg';
+var img13 = new Image();
+img1.src = 'img/rant.jpg';
