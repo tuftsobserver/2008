@@ -9,10 +9,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
-	background: #A1FB50;
+  background: #eaeaea;
 }
 
 p {
@@ -23,92 +20,57 @@ p {
 article {
 	padding: 50px;
 	padding-top: 60px;
-	background: #d0d0d0;
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 article p {
-  max-width: 800px;
-	margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin-top: 40px;
 	text-align: justify;
-	font-size: 1.2rem;
 }
 
-.big-emph {
-	font-size: 4.3rem;
-	color: #3B1261;
-	font-family: 'Play', sans-serif;
-	line-height: 1;
-  font-weight: bold;
-  text-align: left;
-}
 
 .landing-page {
   height: 100vh;
   text-align: center;
   position: relative;
-
 }
 
-.author {
+h2 {
 	font-family: 'Play', sans-serif;
-	text-align: right;
-	margin-left: 40px;
-	float: left;
-  position: absolute;
-  bottom: 50px;
-  left: 0;
+  text-align: center;
 }
 
 .intro {
-	max-width: 700px;
-  width: 50%;
-	font-size: 1.3rem;
-	text-align: right;
-	float: right;
-	padding-right: 70px;
-	position: absolute;
-	bottom: 50px;
-  right: 0;
-
+	max-width: 800px;
+  text-align: justify;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
 }
 
-.section {
-	margin: 200px 0;
-}
-
-.sectiontwo p {
-	margin-left: 0;
-}
-
-.sectionthree p {
-  margin-right: 0;
-}
 
 .title {
-  position: relative;
-	top: 0;
-	left: 0;
-
+  position: absolute;
 	height: 100vh;
 	width: 100%;
-
   text-align: center;
-
   overflow: hidden;
+  background-color: #38d926;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 80 80'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .title h1 {
   font-family: 'Play', sans-serif;
   font-weight: bold;
-  font-size: 70vmin;
-
+  font-size: 40vw;
   margin: 0;
   padding: 0;
   width: auto;
-
   position: relative;
   top: 50%;
   left: 50%;
@@ -128,90 +90,13 @@ article p {
   border: 4px solid blue;
   padding: 0 2px;
   cursor: pointer;
-
 }
 
 .timetravel {
-  background:red;
-  height: 2000px;
+  height: calc(2000px + 100vh);
   width: 100%;
-  top: 0px;
-}
-
-.fixposition {
-  position: fixed;
-
-}
-
-.absoluteposition {
   position: relative;
-}
 
-@keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-.ticker-wrap {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-  height: 4rem;
-  background-color: blue;
-  padding-left: 100%;  /*offset items to begin */
-}
-
-.ticker {
-
-  display: inline-block;
-  height: 4rem;
-  line-height: 4rem;
-  white-space: nowrap; /* display items in a line*/
-  padding-right: 100%; /*ensure items go before animations repeat (taken from parent due to inline-block)*/
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: ticker;
-  animation-duration: 20s;
-
-  }
-
-.ticker__item {
-
-  display: inline-block;
-  padding: 0 2rem;
-  color: black;
-  font-family: 'Play', sans-serif;
-  font-size: 1.4rem;
-  margin: 0;
-
-}
-
-/*.ticker-item p {
-	margin-top: 0;
-	margin-bottom: 40px;
-    font-size: 3rem;
-    color: black;
-}
-*/
-
-a {
-  text-decoration: none;
-}
-
-#tester {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /*display: none;*/
 }
 
 #popup-media {
@@ -232,16 +117,24 @@ a {
 }
 
 .back-to-observer {
-  font-family: 'Faster One', cursive;
   text-align: center;
-  font-size: 50px;
   padding: 50px 0;
 }
 
 .back-to-observer .click {
+  font-family: 'Faster One', cursive;
   font-weight: normal;
+  font-size: 50px;
+}
+
+.back-to-observer p {
+  text-align:center;
 }
 
 .italic {
   font-style:italic;
+}
+
+a {
+  text-decoration: none;
 }
